@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | German Garcia Estevez</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2593/2593194.png" type="image/png">
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="German Garcia Estevez - Personal Projects in Artificial Intelligence, Big Data, and Web Development.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Configuration for Dark Mode -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5', // Indigo-600
+                        secondary: '#10B981', // Green-500
+                        accent: '#F59E0B', // Amber-500
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: 0, transform: 'translateY(20px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: 0 },
+                            '100%': { opacity: 1 },
+                        },
+                    },
+                },
+            },
+            plugins: [],
+        }
+    </script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888; 
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            padding: 20px;
+            transition: margin-left 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans dark:bg-gray-900 dark:text-gray-100">
+
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#hero" class="text-primary dark:text-primary text-2xl font-bold">German Garcia Estevez</a>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium">About Me</a>
+                    <a href="#ai" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Artificial Intelligence</a>
+                    <a href="#bigdata" class="text-gray-700 dark:text-gray-300 hover:text-secondary dark:hover:text-secondary px-3 py-2 rounded-md text-sm font-medium">Big Data/DA</a>
+                    <a href="#websites" class="text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent px-3 py-2 rounded-md text-sm font-medium">Websites</a>
+                    <a href="#testimonials" class="text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent px-3 py-2 rounded-md text-sm font-medium">Testimonials</a>
+                </div>
+                <div class="flex items-center">
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" class="text-gray-700 dark:text-gray-300 focus:outline-none mr-4" aria-label="Toggle Dark Mode">
+                        <i class="fas fa-moon fa-lg"></i>
+                    </button>
+                    <div class="md:hidden">
+                        <!-- Mobile Menu Button -->
+                        <button id="mobile-menu-button" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary focus:outline-none">
+                            <i class="fas fa-bars fa-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800">
+            <a href="#about" class="block text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 px-4 py-2 text-sm">About Me</a>
+            <a href="#ai" class="block text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 px-4 py-2 text-sm">Artificial Intelligence</a>
+            <a href="#bigdata" class="block text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 px-4 py-2 text-sm">Big Data/DA</a>
+            <a href="#websites" class="block text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 px-4 py-2 text-sm">Websites</a>
+            <a href="#testimonials" class="block text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 px-4 py-2 text-sm">Testimonials</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content pt-20">
+        <!-- Hero Section -->
+        <section id="hero" class="bg-gradient-to-r from-blue-600 to-indigo-500 text-white text-center py-24 fade-in">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fadeInUp">Welcome to German Garcia Estevez's Projects</h1>
+                <p class="text-lg md:text-2xl mb-6 animate-fadeInUp delay-200">Explore my personal projects in Artificial Intelligence, Big Data, and Web Development.</p>
+                <a href="https://cv.germange.com/" class="inline-block px-6 py-3 bg-white text-blue-600 font-semibold rounded-full shadow hover:bg-gray-100 transition animate-fadeInUp delay-400">Learn More</a>
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section class="py-12 bg-gray-50 dark:bg-gray-800" id="about">
+            <div class="container mx-auto px-4 fade-in">
+                <h2 class="text-3xl font-semibold mb-6 flex items-center justify-center">
+                    <i class="fas fa-user mr-3 text-primary dark:text-primary"></i>About Me
+                </h2>
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2">
+                        <img src="Banner.png" alt="About Me" class="rounded-lg shadow-md w-full transform hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0">
+                        <p class="text-gray-700 dark:text-gray-300 mb-4 animate-fadeInUp">With my expertise in AI and Big Data, I am equipped to solve a wide range of challenges related to process automation, data analysis, and even engineering. All of this, along with my certifications and strong interest, provides me with a distinctive edge and great motivation.</p>
+                        <p class="text-gray-700 dark:text-gray-300 animate-fadeInUp delay-200">I continuously seek to expand my knowledge and skills, working on diverse projects that challenge me and contribute to my growth in the tech industry.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artificial Intelligence Projects -->
+        <section class="py-12" id="ai">
+            <div class="container mx-auto px-4 fade-in">
+                <h2 class="text-3xl font-semibold mb-8 flex items-center justify-center">
+                    <i class="fas fa-robot mr-3 text-primary dark:text-primary"></i>Artificial Intelligence Projects
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- AI Project 1 -->
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300 animate-fadeInUp">
+                        <img src="https://d-medical.com/wp-content/uploads/Glucometro-Medicion-Glucosa.png" alt="AI Project 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Machine Learning Predict Diabetes</h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">Implemented advanced machine learning models to predict diabetes.</p>
+                            <div class="flex space-x-4">
+                                <a href="https://colab.research.google.com/drive/1onP7i0F2rJG1a9xImGjYdtfC2uthzy2n?usp=sharing" target="_blank" class="inline-flex items-center px-4 py-2 bg-primary text-white rounded hover:bg-indigo-700 transition">
+                                    <i class="fab fa-google mr-2"></i>View on Colab
+                                <a href="https://www.youtube.com/watch?v=pfe2VNjNwCk" target="_blank" class="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition">
+                                    <i class="fab fa-youtube mr-2"></i>View on YouTube
+                                </a>
+                                    <!-- Add more buttons here if needed -->
+                                </div>
+                            </div>
+                        </div>
+
+                    <!-- Add more AI projects here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Big Data/DA Projects -->
+        <section class="py-12 bg-gray-50 dark:bg-gray-800" id="bigdata">
+            <div class="container mx-auto px-4 fade-in">
+                <h2 class="text-3xl font-semibold mb-8 flex items-center justify-center">
+                    <i class="fas fa-chart-line mr-3 text-secondary dark:text-secondary"></i>Big Data/DA Projects
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Big Data Project 1 -->
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300 animate-fadeInUp flex flex-col">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxpz6foAc1PTEW5NL_y_0JqSwWfOpltOMe1A&s" alt="Big Data Project 1" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Datahack_final</h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">The marketing director requires generating value from these data and asks you to perform an analysis. This analysis must be based on the various factors that we can measure in the dataset.</p>
+                            <div class="flex space-x-4 mt-auto">
+                                <a href="https://github.com/germangarest/Datahack_final" target="_blank" class="inline-flex items-center px-4 py-2 bg-secondary text-white rounded hover:bg-green-700 transition">
+                                    <i class="fab fa-github mr-2"></i>View on GitHub
+                                </a>
+                                <!-- Añade más botones si es necesario -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Big Data Project 2 -->
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300 animate-fadeInUp delay-200 flex flex-col">
+                        <img src="https://img.freepik.com/vector-premium/policia-arrestando-personajes-criminales-rostro-color-plano-regulacion-violacion-ley-oficial-atrapo-al-hombre-ilustracion-dibujos-animados-aislados-castigo-crimen-diseno-grafico-animacion-web_151150-4124.jpg" alt="Big Data Project 2" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-2">CoderHouse</h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">The main objective of this project was to use data analysis techniques to better understand the dynamics of crime in the Autonomous City of Buenos Aires.</p>
+                            <div class="flex space-x-4 mt-auto">
+                                <a href="https://github.com/germangarest/CoderHouse" target="_blank" class="inline-flex items-center px-4 py-2 bg-secondary text-white rounded hover:bg-green-700 transition">
+                                    <i class="fab fa-github mr-2"></i>View on GitHub
+                                </a>
+                                <!-- Añade más botones si es necesario -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Añade más proyectos de Big Data aquí -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Web Development Projects -->
+        <section class="py-12" id="websites">
+            <div class="container mx-auto px-4 fade-in">
+                <h2 class="text-3xl font-semibold mb-8 flex items-center justify-center">
+                    <i class="fas fa-globe mr-3 text-accent dark:text-accent"></i>Web Development Projects
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Website Project 1 -->
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300 animate-fadeInUp flex flex-col">
+                        <img src="Gimnasio.png" alt="Gimnasio German Garcia Estevez" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Gym made with WordPress</h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">Website made with WordPress to practice the use of Elementor.</p>
+                            <div class="flex space-x-4 mt-auto">
+                                <a href="https://gimnasio.germange.com" target="_blank" class="inline-flex items-center px-4 py-2 bg-primary text-white rounded hover:bg-indigo-700 transition">
+                                    <i class="fas fa-external-link-alt mr-2"></i>Visit Website
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Website Project 2 -->
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300 animate-fadeInUp delay-200 flex flex-col">
+                        <img src="Oliva.png" alt="Oliva Dorada" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Oliva Dorada</h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">Project of an oil page made with HTML, CSS, JavaScript.</p>
+                            <div class="flex space-x-4 mt-auto">
+                                <a href="https://olivadorada.germange.com" target="_blank" class="inline-flex items-center px-4 py-2 bg-primary text-white rounded hover:bg-indigo-700 transition">
+                                    <i class="fas fa-external-link-alt mr-2"></i>Visit Website
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Website Project 3 -->
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300 animate-fadeInUp delay-400 flex flex-col">
+                        <img src="Contavan.png" alt="Contavan" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Contavan</h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">Counter made with JavaScript, HTML and CSS. Functionalities for milestone setting.</p>
+                            <div class="flex space-x-4 mt-auto">
+                                <a href="https://contavan.germange.com/" target="_blank" class="inline-flex items-center px-4 py-2 bg-primary text-white rounded hover:bg-indigo-700 transition">
+                                    <i class="fas fa-external-link-alt mr-2"></i>Visit Website
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Website Project 4 -->
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300 animate-fadeInUp delay-400 flex flex-col">
+                        <img src="Certs.png" alt="Contavan" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Certs</h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">Personal page to publish all my certifications.</p>
+                            <div class="flex space-x-4 mt-auto">
+                                <a href="https://github.com/germangarest/Certifications" target="_blank" class="inline-flex items-center px-4 py-2 bg-secondary text-white rounded hover:bg-green-700 transition">
+                                    <i class="fab fa-github mr-2"></i>View on GitHub
+                                </a>
+                                <a href="https://certs.germange.com/" target="_blank" class="inline-flex items-center px-4 py-2 bg-primary text-white rounded hover:bg-indigo-700 transition">
+                                    <i class="fas fa-external-link-alt mr-2"></i>Visit Website
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Añade más proyectos de Websites aquí -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-12 bg-gray-50 dark:bg-gray-800" id="testimonials">
+            <div class="container mx-auto px-4 fade-in">
+                <h2 class="text-3xl font-semibold mb-8 flex items-center justify-center">
+                    <i class="fas fa-comments mr-3 text-accent dark:text-accent"></i>Testimonials
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 transform hover:scale-105 transition duration-300 animate-fadeInUp flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <img src="https://media.licdn.com/dms/image/v2/D4D03AQGKacEbbQNA1Q/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1727601525607?e=1736380800&v=beta&t=K14M_mDzGoiAZtDJcpwwH80KMyG2n2NuSlizGUC13mQ" alt="Marcos" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-lg font-semibold">Marcos Garcia</h4>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Student</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mt-auto">"German Garcia Estevez has great skills. His work is professional and highly competent."</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <!-- <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 transform hover:scale-105 transition duration-300 animate-fadeInUp delay-200">
+                        <div class="flex items-center mb-4">
+                            <img src="assets/client2.jpg" alt="Client 2" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-lg font-semibold">Jane Smith</h4>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Marketing Director at Company Y</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300">"The German team developed our website with impressive functionality and an attractive design. We've seen a significant increase in user engagement."</p>
+                    </div>
+                     Testimonial 3 -->
+                    <!-- <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 transform hover:scale-105 transition duration-300 animate-fadeInUp delay-400">
+                        <div class="flex items-center mb-4">
+                            <img src="assets/client3.jpg" alt="Client 3" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-lg font-semibold">Michael Brown</h4>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Data Analyst at Company Z</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300">"Thanks to German's Big Data services, we have optimized our processes and improved our operational efficiency. His expertise is invaluable."</p>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://github.com/germangarest" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition transform hover:scale-110">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/germangarest/" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-secondary dark:hover:text-secondary transition transform hover:scale-110">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 German Garcia Estevez. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Additional Functionalities -->
+    <script>
+        // Toggle Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 60, // Adjust the offset according to the header height
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu after clicking
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Dark Mode Toggle
+        // Check user preference
+        if (localStorage.getItem('theme') === 'dark' || 
+            (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+            themeToggle.innerHTML = '<i class="fas fa-sun fa-lg"></i>';
+        } else {
+            themeToggle.innerHTML = '<i class="fas fa-moon fa-lg"></i>';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            if (htmlElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = '<i class="fas fa-sun fa-lg"></i>';
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = '<i class="fas fa-moon fa-lg"></i>';
+            }
+        });
+
+        // Active Link Highlight on Scroll
+        const sections = document.querySelectorAll('section');
+        const headerLinks = document.querySelectorAll('header a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            headerLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
